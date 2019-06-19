@@ -19,6 +19,12 @@ Sau khi đã cấu hình xong, ở môi trường local dùng ngrok để tạo 
 ngrok http [port] # Public url hết hạn trong 8 tiếng
 ```
 
+Đối với ASP.NET MVC, để tránh lỗi 400 - invalid hostname, thì chạy lệnh như sau
+
+```bash
+ngrok http [port] -host-header="localhost:[port]"
+```
+
 Tiến hành lấy public url thông qua api của ngrok
 
 ```bash
